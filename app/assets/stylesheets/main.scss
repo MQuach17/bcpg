@@ -2,8 +2,8 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 /*
-*= require_self
 */
-.body{
-	background-color: red;
+body{
+	margin: 0;
+	background-image: url('bubbleBG.png');
 }
