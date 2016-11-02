@@ -3,7 +3,78 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 /*
 */
+@mixin no-padding{
+	padding:0;
+}
+@mixin no-margin{
+	margin: 0;
+}
 body{
 	margin: 0;
+}
+nav.navbar{
+	border-radius: 0px;
+	margin-bottom:0;
+	z-index:9;
+	.navbar-brand{
+		padding:0;
+		margin:10px 10px;
+		#logo{
+			height:inherit;
+			width:auto;
+			margin-left:10px;
+		}
+	}
+}
+.fixed-navbar{
+	position:fixed;
+	width:100%;
+	margin:0 !important;
+}
+.clear-navbar{
+	padding-top:72px + 50px!important; 
+}
+.jumbotron{
+	@include no-padding;
+	@include no-margin;
+    width: 100%;
+    top: 0;	
+	#main-hero{
+		background: url('main-hero.JPG');
+		background-attachment:fixed;
+		background-repeat:no-repeat;
+		@include no-padding;
+		height:500px;
+		@include no-margin;
+	    background-size: cover;
+	    background-position: center;
+	}
+}
+.affix{
+	top:0;
+	width:100%;
+}
+.hero-overlay{
+	background: rgba(0,0,0,.5);
+	height:100%;
+	position: fixed;
+	width:100%;
+	h1{
+		color:white;
+		height:100%;
+		@include no-margin;
+		line-height: 500px;
+		text-align:center;
+	}
+}
+.content-wrapper{
+	position:relative;
 	background-image: url('bubbleBG.png');
+	.content{
+		background-color:white;
+		position:relative;
+		background-image: url('bubbleBG.png');
+		padding:50px;
+
+	}	
 }

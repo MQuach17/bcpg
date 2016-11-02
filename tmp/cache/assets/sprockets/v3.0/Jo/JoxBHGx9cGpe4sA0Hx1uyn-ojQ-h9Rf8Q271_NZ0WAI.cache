@@ -1,0 +1,9 @@
+I"`(function() {
+  var top;
+
+  top = window.pageYOffset;
+
+  console.log(top);
+
+}).call(this);
+:ET
