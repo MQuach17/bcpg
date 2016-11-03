@@ -9,6 +9,20 @@
 @mixin no-margin{
 	margin: 0;
 }
+$light-blue:rgb(163, 208, 255);
+$dark-blue:rgb(70,77,84);
+.dark-blue-bg{
+	background-color:$dark-blue;
+}
+.light-blue-bg{
+	background-color:$light-blue;
+}
+.white-bg{
+	background-color:white;
+}
+@mixin bottom-box-shadow{
+	box-shadow: -1px 6px 3px rgba(0,0,0,.5);
+}
 body{
 	margin: 0;
 }
@@ -17,7 +31,7 @@ nav.navbar.navbar-default{
 	border-radius:0px;
 	margin-bottom:0;
 	z-index:9;
-	background-color: rgba(163, 208, 255, 1);
+	background-color: rgba(163, 208, 255, .5);
 	.navbar-brand{
 		padding:0;
 		margin:10px 10px;
@@ -71,15 +85,40 @@ nav.navbar.navbar-default{
 	@include no-margin;
     width: 100%;
     top: 0;	
-	#main-hero{
-		background: url('main-hero.JPG');
-		background-attachment:fixed;
-		background-repeat:no-repeat;
+
+	.hero-image{
 		@include no-padding;
 		height:500px;
 		@include no-margin;
-	    background-size: cover;
-	    background-position: center;
+	    &#main-index-hero{
+			background: url('main-hero.JPG');
+			background-attachment:fixed;
+			background-repeat:no-repeat;
+		    background-size: cover;
+		    background-position: center;		
+		}
+	    &#main-services-hero{
+			background: url('main-hero.JPG');
+			background-attachment:fixed;
+			background-repeat:no-repeat;
+		    background-size: cover;
+		    background-position: center;		
+		}		
+	    &#main-testimonials-hero{
+			background: url('main-hero.JPG');
+			background-attachment:fixed;
+			background-repeat:no-repeat;
+		    background-size: cover;
+		    background-position: center;		
+		}	
+	    &#main-contact-hero{
+			background: url('main-hero.JPG');
+			background-attachment:fixed;
+			background-repeat:no-repeat;
+		    background-size: cover;
+		    background-position: center;		
+		}						
+
 	}
 }
 .affix{
@@ -105,6 +144,7 @@ nav.navbar.navbar-default{
 .content-wrapper{
 	position:relative;
 	background-image: url('bubbleBG.png');
+	background-size:contain;
 	.content{
 		background-color:white;
 		position:relative;
@@ -112,4 +152,17 @@ nav.navbar.navbar-default{
 		padding:50px;
 
 	}	
+	.row{
+		margin: 0;
+	}
+}
+footer{
+	.row{
+		margin:0;
+	}
+}
+.full-width-container{
+	margin-bottom:100px;
+	@include bottom-box-shadow;
+
 }

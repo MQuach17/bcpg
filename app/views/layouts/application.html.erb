@@ -9,40 +9,46 @@
   </head>
 
   <body id="<%= page_id %>" >
-  <% if page_id == 'main-index' %>
-<div class="jumbotron">
-  <div class="" id="main-hero">
-  	<div class="hero-overlay">
-  		<h1>Bucks County Pet Grooming</h1>
-  	</div>
-  </div>
-</div>
-	<% end %>  
-<nav class="navbar navbar-default" data-spy="affix" data-offset-top="500">
-  <div class="container-fluid">
-    <!-- Brand and toggle get grouped for better mobile display -->
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" href="#"><%= image_tag("bcpg_logo.png",:alt=>"Bucks County Pet Grooming",:id=>"logo") %></a>
+    <div class="jumbotron">
+      <div class="hero-image" id="<%= page_id%>-hero">
+      	<div class="hero-overlay">
+      		<h1>Bucks County Pet Grooming</h1>
+      	</div>
+      </div>
     </div>
+    <nav class="navbar navbar-default" data-spy="affix" data-offset-top="500">
+      <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#"><%= image_tag("bcpg_logo.png",:alt=>"Bucks County Pet Grooming",:id=>"logo") %></a>
+        </div>
 
-    <!-- Collect the nav links, forms, and other content for toggling -->
-    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      <ul class="nav navbar-nav navbar-right">
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav navbar-right">
 
-        <li class="<%= 'active' if page_id =='main-index'  %>"><%= link_to "Home", "/"  %></li>
-        <li class="<%= 'active' if page_id =='appointment-index'  %>"><%= link_to "Appointments", "appointment#index" %></li>
-        <li class="<%= 'active' if page_id =='main-services'  %>"><%= link_to "Services", "/services"  %></li>
-        <li class="<%= 'active' if page_id =='main-testimonials'  %>"><%= link_to "Testimonials", "/testimonials" %></li>
-        <li class="<%= 'active' if page_id =='main-contact'  %>"><%= link_to "Contact", "/contact" %></li>
-      </ul>
-    </div><!-- /.navbar-collapse -->
-  </div><!-- /.container-fluid -->
-</nav>    <%= yield %>
+            <li class="<%= 'active' if page_id =='main-index'  %>"><%= link_to "Home", "/"  %></li>
+            <li class="<%= 'active' if page_id =='appointment-index'  %>"><%= link_to "Appointments", "appointment#index" %></li>
+            <li class="<%= 'active' if page_id =='main-services'  %>"><%= link_to "Services", "/services"  %></li>
+            <li class="<%= 'active' if page_id =='main-testimonials'  %>"><%= link_to "Testimonials", "/testimonials" %></li>
+            <li class="<%= 'active' if page_id =='main-contact'  %>"><%= link_to "Contact", "/contact" %></li>
+          </ul>
+        </div><!-- /.navbar-collapse -->
+      </div><!-- /.container-fluid -->
+    </nav>    
+    <%= yield %>
+    <footer>
+      <div class="row">
+      <div class="col-md-12 dark-blue-bg" style="height:500px">
+          
+      </div>
+      </div>
+    </footer>
   </body>
 </html>
