@@ -6,6 +6,7 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <meta name="viewport" content="width=devide-width,initial-scale=1">
   </head>
 
   <body id="<%= page_id %>" >
@@ -45,8 +46,23 @@
     <%= yield %>
     <footer>
       <div class="row">
-      <div class="col-md-12 dark-blue-bg" style="height:500px">
+<!--       <div class="col-md-3">
+            <img src="/assets/bcpg_logo.png" id = "index-logo"/>
           
+      </div> -->
+      <div class="col-md-12 footer-text">  
+                  <img src="/assets/bcpg_logo.png" id = "footer-logo"/>
+
+          <h1>Bucks County Mobile Pet Grooming</h1>
+          <ul class="list-inline">
+          <!-- needs to be horizontal nav -->
+            <li><%= link_to "Home", "/"  %></li>|
+            <li><%= link_to "Appointments", "appointment#index" %> </li> |
+            <li> <%= link_to "Services", "/services"  %></li> |
+            <li> <%= link_to "Testimonials", "/testimonials" %></li> |
+            <li> <%= link_to "Contact", "/contact" %></li>
+          </ul>
+          <p><span class="bold">Contact:</span> Tony Quach (215) 597 - 0112 Tues - Sat, 8am - 6pm by apt.</p>
       </div>
       </div>
     </footer>

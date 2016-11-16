@@ -9,6 +9,9 @@
 @mixin no-margin{
 	margin: 0;
 }
+.content-padding{
+	padding:50px;
+}
 $light-blue:rgb(163, 208, 255);
 $dark-blue:rgb(70,77,84);
 .dark-blue-bg{
@@ -21,7 +24,7 @@ $dark-blue:rgb(70,77,84);
 	background-color:white;
 }
 @mixin bottom-box-shadow{
-	box-shadow: -1px 6px 3px rgba(0,0,0,.5);
+	box-shadow: -1px 8px 20px rgba(0,0,0,.5);
 }
 body{
 	margin: 0;
@@ -31,7 +34,8 @@ nav.navbar.navbar-default{
 	border-radius:0px;
 	margin-bottom:0;
 	z-index:9;
-	background-color: rgba(163, 208, 255, .5);
+	background-color: rgba(163, 208, 255, 1);
+	@include bottom-box-shadow;
 	.navbar-brand{
 		padding:0;
 		margin:10px 10px;
@@ -130,7 +134,7 @@ nav.navbar.navbar-default{
 }
 .hero-overlay{
 	background: rgba(0,0,0,.5);
-	height:100%;
+	height:500px;
 	position: fixed;
 	width:100%;
 	h1{
@@ -141,28 +145,49 @@ nav.navbar.navbar-default{
 		text-align:center;
 	}
 }
-.content-wrapper{
-	position:relative;
-	background-image: url('bubbleBG.png');
-	background-size:contain;
-	.content{
-		background-color:white;
-		position:relative;
-		background-image: url('bubbleBG.png');
-		padding:50px;
-
-	}	
-	.row{
-		margin: 0;
-	}
+.row{
+	margin-right:0;
+	margin-left:0;
 }
 footer{
+	background-color:$light-blue;
+	// background-image:url("/assets/bcpg_logo_transparent.png");
 	.row{
 		margin:0;
+		padding: 50px;
+	}
+	.footer-text{
+		text-align: center;
 	}
 }
 .full-width-container{
 	margin-bottom:100px;
 	@include bottom-box-shadow;
+	min-height:400px;
+}
+.bold{
+	font-weight:700;
+}
+.full-height{
+	height:100%;
+}
+.content-wrapper{
+	position: relative;
+}
+#index-logo,#footer-logo{
+	height:180px;
+	width: 180px;
+	// position: absolute;
+	// top:0;
+	// bottom:0;
+	// right:0;
+	// left:0;
+	// margin:auto;
+}
+#footer-logo{
 
+}
+#profile-icon{
+	height:180px;
+	width:180px;
 }
